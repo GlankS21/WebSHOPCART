@@ -1,0 +1,436 @@
+:root {
+    --spacing-large: 80px;
+    --spacing-small: 20px;
+    --primary-color: #1A1B24;
+    --accent-color: #ff6600;
+    --nav-color-bg: #EDF2F4;
+    --text-h1: 48px;
+    --text-h2: 24px;
+    --text-normal: 18px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-size: var(--text-h1);
+}
+/* ---------------------- Main --------------------- */
+.mobile-menu{
+    display: none;
+    width: 22px;
+    height: 1em;
+    cursor: pointer;
+    z-index: 1000;
+}
+.mobile-menu span {
+    display: block; 
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color); 
+    margin-bottom: 6px;
+}
+.mobile-menu span:last-child {
+    margin-bottom: 0;
+}
+.mobile-menu.is-fixed {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.sub-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 85%;
+    height: 100vh;
+    background-color: #f8f8f8;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    padding-top: 80px;
+}
+.sub-mobile-menu > .menu-mb{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-left: 34px;
+    gap: 15px;
+}
+.sub-mobile-menu > .menu-mb  a{
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.sub-mobile-menu.active {
+    left: 0;
+}
+.mobile-menu.open {
+    left: 15px;
+    top: 24px
+}
+header {
+    background-color: var(--nav-color-bg);
+    padding: 15px 90px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 135px; 
+}
+.top-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.top-level h1{
+    font-size: var(--text-h1);
+    text-transform: uppercase;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.icons a {
+    text-align: center;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+}
+.bottom-level {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+    padding: 0; 
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 38px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: var(--text-normal);
+    line-height: 40px;
+}
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+.search input {
+    padding: 5px 10px;
+    font-size: var(--text-normal);
+    height: 42px;
+    min-width: 240px;
+    border: 3px solid #F8F8F8;
+    background-color: #F8F8F8;
+}
+.search input:focus {
+    outline: none;
+}
+/* ---------- MAIN ---------- */
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 40px; /* добавили боковые отступы */
+   margin-bottom: 100px; 
+}
+
+
+.checkout-container h2 {
+  font-size: 54px;
+  margin-top: 0px; /* Добавлен отступ сверху */
+  margin-bottom: 100px;
+}
+
+.checkout-wrapper {
+  display: flex;
+  gap: 50px; /* можно 10px */
+  align-items: flex-start;
+  justify-content: flex-start; /* заменяем space-between */
+}
+
+
+
+.customer-info {
+  flex: 1 1 100%;
+  max-width: 600px; /* было 685px — теперь немного меньше */
+  min-width: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.customer-info h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper input {
+  padding: 16px 20px;
+  height: 56px;
+  font-size: 16px;
+  background-color: #EDF2F4;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+}
+
+.input-wrapper input::placeholder {
+  color: #8892A0;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.order-summary {
+  flex: 0 1 820px;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 65px; 
+}
+
+
+
+/* Товар */
+.product-summary {
+  background-color: var(--light-bg);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.product-size {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.product-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity button {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Промокод */
+.promo-section p {
+  font-size: 13px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.promo-input {
+  display: flex;
+  gap: 8px;
+}
+
+.promo-input input {
+  flex: 1;
+  padding: 12px 16px;
+  height: 44px;
+  font-size: 14px;
+  background-color: var(--light-bg);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+}
+
+.promo-input input::placeholder {
+  color: #8892A0;
+}
+
+.promo-input button {
+  padding: 0 16px;
+  font-size: 13px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Итог */
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+/* Кнопка */
+.checkout-button {
+  margin-top: 4px;
+  padding: 16px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+.checkout-button:hover {
+  background-color: green;
+}
+
+
+
+/* ============ FOOTER ============ */
+.footer {
+    padding: 45px 90px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-logo{
+    flex: 1;
+}
+.footer-links{
+    flex: 1;
+}
+.footer-logo h1 {
+    font-size: var(--text-h1);
+}
+.footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 75px;
+}
+.section h3 {
+    font-size: var(--text-normal);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.section ul li {
+    margin-bottom: 10px;
+}
+.section a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--text-normal);
+}
+.section a:hover {
+    color: var(--accent-color);
+}
+@media (max-width: 1024px) {
+  .checkout-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .customer-info,
+  .order-summary {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .checkout-container {
+    padding: 60px 20px;
+    margin-top: 60px;
+  }
+
+  .checkout-container h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-logo h1 {
+    font-size: 32px;
+  }
+
+  .checkout-container h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .checkout-button {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .promo-input {
+    flex-direction: column;
+  }
+
+  .promo-input button {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}

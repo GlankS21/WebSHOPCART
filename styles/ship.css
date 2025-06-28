@@ -1,0 +1,294 @@
+:root {
+    --spacing-large: 80px;
+    --spacing-small: 20px;
+    --primary-color: #1A1B24;
+    --accent-color: #ff6600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Обеспечиваем, чтобы тело страницы заполнило весь экран */
+}
+
+/* Общие стили для страницы */
+.container {
+    width: 890px; /* Задаем ширину контейнера для текста */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 0 20px; /* Немного отступов по бокам */
+}
+
+header {
+    background-color: #EDF2F4;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-large);
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.top-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    margin-left: 15px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 30px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.bottom-level {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 5px 10px;
+    font-size: 15px;
+    height: 30px;
+    border-radius: 4px;
+    border: 3px solid #F8F8F8;
+    background-color: #F8F8F8;
+    color: #000000;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+/* Основной стиль заголовков */
+h2 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: var(--spacing-large);
+    text-align: center; /* Центрируем текст */
+}
+
+/* Стили для страницы брендов */
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
+    gap: 30px 30px; /* Отступ между колонками по вертикали и горизонтали */
+    margin-top: 20px;
+    padding-left: 100px;  /* Отступ слева */
+    padding-right: 100px; /* Отступ справа */
+}
+
+.brand-item {
+    padding: 10px;
+}
+
+.brand-item p {
+    font-size: 36px;  /* Увеличиваем размер для жирных букв (название бренда) */
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.brand-item ul {
+    list-style: none;
+}
+
+.brand-item ul li {
+    font-size: 24px;  /* Устанавливаем размер шрифта для текста на 24px */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Футер */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0; /* Отступ сверху и снизу футера */
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: auto; /* Обеспечиваем, что футер будет на самом низу */
+}
+
+/* Контент футера */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+}
+
+/* Логотип футера */
+.footer-logo {
+    text-align: left;
+    width: 120%;
+    margin-left: 50px;
+}
+
+.footer-logo h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Ссылки футера */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    gap: 40px;
+}
+
+.section {
+    width: 48%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.section a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1400px) {
+    .brands-grid {
+        gap: 20px 20px; /* Уменьшаем отступы между колонками */
+        padding-left: 60px; /* Уменьшаем отступы слева */
+        padding-right: 60px; /* Уменьшаем отступы справа */
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center; /* Центрируем контент футера */
+        gap: 20px;
+    }
+    .footer-logo {
+        text-align: center; /* Выравнивание логотипа футера по центру */
+    }
+    .footer-links {
+        width: 100%;
+        justify-content: center; /* Центрируем ссылки футера */
+    }
+    .section {
+        width: 100%;
+        text-align: center; /* Центрируем секции футера */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .footer-logo {
+        text-align: center;
+    }
+    .footer-links {
+        width: 100%;
+        justify-content: center;
+    }
+    
+}
+/* Убираем подчеркивание и изменение цвета на логотип */
+.logo-link {
+  text-decoration: none;  /* Убирает подчеркивание */
+  color: inherit;         /* Наследует цвет текста от родителя */
+}
+
+.logo-link:hover {
+  text-decoration: none;  /* Убирает подчеркивание при наведении */
+  color: inherit;         /* Сохраняет тот же цвет при наведении */
+}
+
+/* Стили для заголовка h1 */
+.logo h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+

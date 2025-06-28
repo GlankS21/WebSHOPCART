@@ -1,0 +1,290 @@
+:root {
+  --spacing-large: 80px;
+  --spacing-small: 20px;
+  --primary-color: #1A1B24;
+  --accent-color: #ff6600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* Хедер */
+header {
+  background-color: #EDF2F4;
+  padding: 10px 120px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-small);
+  width: 100%;
+}
+
+.top-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 15px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  margin-left: 30px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.bottom-level {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Активный пункт меню */
+nav ul li a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Поиск */
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 5px 10px;
+  font-size: 15px;
+  height: 30px;
+  border-radius: 4px;
+  border: 3px solid #F8F8F8;
+  background-color: #F8F8F8;
+  color: #000000;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+/* Секция товаров */
+.products {
+  padding: var(--spacing-small) 120px;
+}
+
+/* Контейнер для заголовка и кнопки */
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Заголовок "Одежда" */
+.products-title {
+  font-size: 54px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 30px;
+  line-height: 1;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+  gap: 30px; /* Отступы между товарами */
+  justify-items: center; /* Центрируем товары по горизонтали */
+  margin-bottom: 100px; /* Отступ после сетки товаров */
+}
+
+.product-item {
+  background-color: transparent; /* Полностью прозрачный фон */
+  padding: 0; /* Убираем отступы */
+  text-align: left; /* Выравниваем текст по левому краю */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Выровнять содержимое по левому краю */
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 250px; /* Максимальная ширина товара */
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Сохраняем пропорции изображения */
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.product-item .price {
+  font-size: 16px;
+  color: black;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Футер */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 40px 120px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.footer-logo {
+  text-align: left;
+  width: 120%;
+  margin-left: 50px;
+}
+
+.footer-logo h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  gap: 40px;
+}
+
+.section {
+  width: 48%;
+  text-align: left;
+}
+
+.section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+.section a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.section a:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  header,
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .products {
+    padding: var(--spacing-small) 20px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .product-item {
+    max-width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .section {
+    width: 100%;
+  }
+}
+.logo a {
+  all: unset;  /* Убирает все стили, включая подчеркивание и изменение цвета */
+  cursor: pointer;  /* Добавляет курсор на ссылку */
+}

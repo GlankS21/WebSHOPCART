@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Оформление заказа</title>
+  <link rel="stylesheet" href="styles/checkout.css" />
+</head>
+<body>
+  <header>
+    <div class="top-level">
+        <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="sub-mobile-menu">
+            <ul class="menu-mb">
+                <li><a href="clothes.html">Одежда</a></li>
+                <li><a href="shoes.html">Обувь</a></li>
+                <li><a href="accessories.html">Аксессуары</a></li>
+                <li><a href="collections.html">Коллекции</a></li>
+                <li><a href="brends.html">Бренды</a></li>
+                <li><a href="about.html">О магазине</a></li>
+            </ul>
+        </div>
+        <h1>SHOPCART</h1>
+        <div class="icons">
+            <a href="favourites.html">
+                <img src="images/11-119407_font-awesome-heart-icon 1.svg" alt="Избранное" class="icon">
+            </a>
+            <a href="cart.html">
+                <img src="images/i-Photoroom.svg" alt="Корзина" class="icon">
+            </a>
+        </div>
+    </div>
+    <div class="bottom-level">
+        <nav>
+            <ul>
+                <li><a href="clothes.html">Одежда</a></li>
+                <li><a href="shoes.html">Обувь</a></li>
+                <li><a href="accessories.html">Аксессуары</a></li>
+                <li><a href="collections.html">Коллекции</a></li>
+                <li><a href="brends.html">Бренды</a></li>
+                <li><a href="about.html">О магазине</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <label for="search-input" class="visually-hidden"></label>
+            <input id="search-input" type="text" placeholder="Поиск" aria-label="Поиск по сайту">
+        </div>
+    </div>
+  </header>
+
+  <main class="checkout-container">
+    <h2>Оформление заказа</h2>
+
+    <div class="checkout-wrapper">
+      <!-- ЛЕВАЯ ЧАСТЬ -->
+      <div class="customer-info">
+        <h3>Личные данные</h3>
+
+        <div class="form-row">
+          <div class="input-wrapper">
+            <label>Ваше имя</label>
+            <input type="text" placeholder="Иван Петров">
+          </div>
+          <div class="input-wrapper">
+            <label>Телефон</label>
+            <input type="text" placeholder="+7 996 999 65 56">
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label>Почта</label>
+          <input type="email" placeholder="petrov@ya.ru">
+        </div>
+
+        <div class="form-row">
+          <div class="input-wrapper">
+            <label>Регион доставки</label>
+            <input type="text" placeholder="Самарская область">
+          </div>
+          <div class="input-wrapper">
+            <label>Город доставки</label>
+            <input type="text" placeholder="Самара">
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label>Улица</label>
+          <input type="text" placeholder="Пушкина">
+        </div>
+      </div>
+
+      <!-- ПРАВАЯ ЧАСТЬ -->
+      <div class="order-summary">
+        <div class="product-summary">
+  <div class="product-line">
+    <div class="product-info">
+      <p class="product-name">New Balance 2002R</p>
+      <p class="product-size">EU 36</p>
+    </div>
+    <div class="price-block">
+      <p class="product-price">36 990 ₽</p>
+      <div class="quantity">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+        <div class="promo-section">
+          <p>Если у вас есть промокод<br>введите его сюда</p>
+          <div class="promo-input">
+            <input type="text" placeholder="ПРОМОКОД" />
+            <button>ПРИМЕНИТЬ</button>
+          </div>
+        </div>
+
+        <div class="total-row">
+          <span>Общая стоимость</span>
+          <span class="price">36 990 ₽</span>
+        </div>
+
+        <button class="checkout-button">ОПЛАТИТЬ</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo"><h1>SHOPCART</h1></div>
+      <div class="footer-links">
+        <div class="section">
+          <h3>РАЗДЕЛЫ</h3>
+          <ul>
+            <li><a href="clothes.html">Одежда</a></li>
+            <li><a href="shoes.html">Обувь</a></li>
+            <li><a href="accessories.html">Аксессуары</a></li>
+            <li><a href="collections.html">Коллекции</a></li>
+            <li><a href="brends.html">Бренды</a></li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>ИНФОРМАЦИЯ</h3>
+          <ul>
+            <li><a href="#">О магазине</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Оплата</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="./js/script.js" defer></script>
+</body>
+</html>
