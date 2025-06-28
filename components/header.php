@@ -18,7 +18,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 <li><a href="about.php" class="<?php echo ($currentPage == 'about.php') ? 'current-page' : ''; ?>">О магазине</a></li>
             </ul>
         </div>
-        <h1>SHOPCART</h1>
+        <h1 onclick="window.location.href='./index.php'" style="cursor: pointer">SHOPCART</h1>
         <div class="icons">
             <a href="favourites.php">
                 <img src="images/11-119407_font-awesome-heart-icon 1.svg" alt="Избранное" class="icon">
