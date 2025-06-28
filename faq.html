@@ -4,45 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SHOPCART - FAQ</title>
-  <link rel="stylesheet" href="style/faq.css" />
+  <link rel="stylesheet" href="styles/faq.css" />
 </head>
 <body>
- <header>
-  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-
-  <div class="top-level">
-    <label for="menu-toggle" class="hamburger">☰</label>
-    <div class="logo">
-      <h1>SHOPCART</h1>
+  <header>
+    <div class="top-level">
+        <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="sub-mobile-menu">
+            <ul class="menu-mb">
+                <li><a href="clothes.html">Одежда</a></li>
+                <li><a href="shoes.html">Обувь</a></li>
+                <li><a href="accessories.html">Аксессуары</a></li>
+                <li><a href="collections.html">Коллекции</a></li>
+                <li><a href="brends.html">Бренды</a></li>
+                <li><a href="about.html">О магазине</a></li>
+            </ul>
+        </div>
+        <h1>SHOPCART</h1>
+        <div class="icons">
+            <a href="favourites.html">
+                <img src="images/11-119407_font-awesome-heart-icon 1.svg" alt="Избранное" class="icon">
+            </a>
+            <a href="cart.html">
+                <img src="images/i-Photoroom.svg" alt="Корзина" class="icon">
+            </a>
+        </div>
     </div>
-    <div class="icons">
-      <a href="favourites.html">
-        <img src="images/11-119407_font-awesome-heart-icon 1.svg" alt="Избранное" class="icon">
-      </a>
-      <a href="cart.html">
-        <img src="images/i-Photoroom.svg" alt="Корзина" class="icon">
-      </a>
+    <div class="bottom-level">
+        <nav>
+            <ul>
+                <li><a href="clothes.html">Одежда</a></li>
+                <li><a href="shoes.html">Обувь</a></li>
+                <li><a href="accessories.html">Аксессуары</a></li>
+                <li><a href="collections.html">Коллекции</a></li>
+                <li><a href="brends.html">Бренды</a></li>
+                <li><a href="about.html">О магазине</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <label for="search-input" class="visually-hidden"></label>
+            <input id="search-input" type="text" placeholder="Поиск" aria-label="Поиск по сайту">
+        </div>
     </div>
-  </div>
-
-  <div class="bottom-level">
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="clothes.html">Одежда</a></li>
-        <li><a href="shoes.html">Обувь</a></li>
-        <li><a href="accessories.html">Аксессуары</a></li>
-        <li><a href="collections.html">Коллекции</a></li>
-        <li><a href="brends.html">Бренды</a></li>
-        <li><a href="about.html">О магазине</a></li>
-      </ul>
-    </nav>
-    <div class="search">
-      <input type="text" placeholder="Поиск" aria-label="Поиск по сайту">
-    </div>
-  </div>
-</header>
-
-
+  </header>
   <!-- Контент -->
   <main class="faq-container">
     <h1>FAQ</h1>
@@ -111,16 +119,7 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuToggle = document.getElementById("menu-toggle");
-      const bottomLevel = document.querySelector(".bottom-level");
-      menuToggle.addEventListener("change", () => {
-        bottomLevel.style.display = menuToggle.checked ? "block" : "none";
-      });
-    });
-  </script>
+<script src="./js/script.js" defer></script>
 </body>
 </html>
 

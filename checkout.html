@@ -51,89 +51,75 @@
         </div>
     </div>
   </header>
-
   <main class="checkout-container">
-    <h2>Оформление заказа</h2>
+    <h1 class="page-title">Оформление заказа</h1>
 
     <div class="checkout-wrapper">
-      <!-- ЛЕВАЯ ЧАСТЬ -->
-      <div class="customer-info">
-        <h3>Личные данные</h3>
+        <form class="customer-info">
+            <h3>Личные данные</h3>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label for="fullName">Ваше имя</label>
+                    <input type="text" id="fullName" placeholder="Иван Петров" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" placeholder="+7 996 999 65 56" required>
+                </div>
+                <div class="input-group full-width">
+                    <label for="email">Почта</label>
+                    <input type="email" id="email" placeholder="petrov@ya.ru" required>
+                </div>
+                <div class="input-group">
+                    <label for="region">Регион доставки</label>
+                    <input type="text" id="region" placeholder="Самарская область" required>
+                </div>
+                <div class="input-group">
+                    <label for="city">Город доставки</label>
+                    <input type="text" id="city" placeholder="Самара" required>
+                </div>
+                <div class="input-group full-width">
+                    <label for="street">Улица</label>
+                    <input type="text" id="street" placeholder="Пушкина" required>
+                </div>
+                </div>
+        </form>
 
-        <div class="form-row">
-          <div class="input-wrapper">
-            <label>Ваше имя</label>
-            <input type="text" placeholder="Иван Петров">
-          </div>
-          <div class="input-wrapper">
-            <label>Телефон</label>
-            <input type="text" placeholder="+7 996 999 65 56">
-          </div>
+        <div class="order-summary-block">
+            <div class="product-summary-list">
+                <div class="product-item">
+                    <div class="product-details">
+                        <p class="product-name">New Balance 2002R</p>
+                        <p class="product-size">EU 36</p>
+                    </div>
+                    <div class="product-price-control">
+                        <p class="product-price">36 990 ₽</p>
+                        <div class="quantity-control">
+                            <button type="button" class="quantity-btn decrease-btn">-</button>
+                            <span class="item-quantity">1</span>
+                            <button type="button" class="quantity-btn increase-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            <div class="promo-section">
+                <p>Если у вас есть промокод<br>введите его сюда</p>
+                <div class="promo-input-group">
+                    <input type="text" placeholder="ПРОМОКОД" aria-label="Введите промокод" />
+                    <button type="button" class="apply-promo-btn">ПРИМЕНИТЬ</button>
+                </div>
+            </div>
+
+            <div class="total-section">
+                <span class="total-label">Общая стоимость</span>
+                <span class="total-price">36 990 ₽</span>
+            </div>
+
+            <button type="submit" form="checkoutForm" class="proceed-to-payment-btn">ОПЛАТИТЬ</button>
         </div>
-
-        <div class="input-wrapper">
-          <label>Почта</label>
-          <input type="email" placeholder="petrov@ya.ru">
-        </div>
-
-        <div class="form-row">
-          <div class="input-wrapper">
-            <label>Регион доставки</label>
-            <input type="text" placeholder="Самарская область">
-          </div>
-          <div class="input-wrapper">
-            <label>Город доставки</label>
-            <input type="text" placeholder="Самара">
-          </div>
-        </div>
-
-        <div class="input-wrapper">
-          <label>Улица</label>
-          <input type="text" placeholder="Пушкина">
-        </div>
-      </div>
-
-      <!-- ПРАВАЯ ЧАСТЬ -->
-      <div class="order-summary">
-        <div class="product-summary">
-  <div class="product-line">
-    <div class="product-info">
-      <p class="product-name">New Balance 2002R</p>
-      <p class="product-size">EU 36</p>
-    </div>
-    <div class="price-block">
-      <p class="product-price">36 990 ₽</p>
-      <div class="quantity">
-        <button>-</button>
-        <span>1</span>
-        <button>+</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-        <div class="promo-section">
-          <p>Если у вас есть промокод<br>введите его сюда</p>
-          <div class="promo-input">
-            <input type="text" placeholder="ПРОМОКОД" />
-            <button>ПРИМЕНИТЬ</button>
-          </div>
-        </div>
-
-        <div class="total-row">
-          <span>Общая стоимость</span>
-          <span class="price">36 990 ₽</span>
-        </div>
-
-        <button class="checkout-button">ОПЛАТИТЬ</button>
-      </div>
     </div>
   </main>
-
   <!-- ФУТЕР -->
   <footer class="footer">
     <div class="footer-content">
