@@ -7,50 +7,7 @@
   <link rel="stylesheet" href="styles/checkout.css" />
 </head>
 <body>
-  <header>
-    <div class="top-level">
-        <div class="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="sub-mobile-menu">
-            <ul class="menu-mb">
-                <li><a href="clothes.html">Одежда</a></li>
-                <li><a href="shoes.html">Обувь</a></li>
-                <li><a href="accessories.html">Аксессуары</a></li>
-                <li><a href="collections.html">Коллекции</a></li>
-                <li><a href="brends.html">Бренды</a></li>
-                <li><a href="about.html">О магазине</a></li>
-            </ul>
-        </div>
-        <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">SHOPCART</h1>
-        <div class="icons">
-            <a href="favourites.html">
-                <img src="images/11-119407_font-awesome-heart-icon 1.svg" alt="Избранное" class="icon">
-            </a>
-            <a href="cart.html">
-                <img src="images/i-Photoroom.svg" alt="Корзина" class="icon">
-            </a>
-        </div>
-    </div>
-    <div class="bottom-level">
-        <nav>
-            <ul>
-                <li><a href="clothes.html">Одежда</a></li>
-                <li><a href="shoes.html">Обувь</a></li>
-                <li><a href="accessories.html">Аксессуары</a></li>
-                <li><a href="collections.html">Коллекции</a></li>
-                <li><a href="brends.html">Бренды</a></li>
-                <li><a href="about.html">О магазине</a></li>
-            </ul>
-        </nav>
-        <div class="search">
-            <label for="search-input" class="visually-hidden"></label>
-            <input id="search-input" type="text" placeholder="Поиск" aria-label="Поиск по сайту">
-        </div>
-    </div>
-  </header>
+  <?php require_once "components/header.php"; ?>
   <main class="checkout-container">
     <h1 class="page-title">Оформление заказа</h1>
 
@@ -120,34 +77,6 @@
         </div>
     </div>
   </main>
-  <!-- ФУТЕР -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo"><h1>SHOPCART</h1></div>
-      <div class="footer-links">
-        <div class="section">
-          <h3>РАЗДЕЛЫ</h3>
-          <ul>
-            <li><a href="clothes.html">Одежда</a></li>
-            <li><a href="shoes.html">Обувь</a></li>
-            <li><a href="accessories.html">Аксессуары</a></li>
-            <li><a href="collections.html">Коллекции</a></li>
-            <li><a href="brends.html">Бренды</a></li>
-          </ul>
-        </div>
-        <div class="section">
-          <h3>ИНФОРМАЦИЯ</h3>
-          <ul>
-            <li><a href="#">О магазине</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Оплата</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-<script src="./js/script.js" defer></script>
+<?php require_once "components/footer.php"; ?>
 </body>
 </html>

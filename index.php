@@ -14,7 +14,7 @@
             <div class="categories">
                 <div class="left-block">
                     <div class="category-item left">
-                        <a href="clothes.html">
+                        <a href="clothes.php">
                             <img src="images/Frame 52.svg" alt="Одежда" class="category-image">
                         </a>
                         <p>Одежда</p>
@@ -22,13 +22,13 @@
                 </div>
                 <div class="right-block">
                     <div class="category-item right">
-                        <a href="accessories.html">
+                        <a href="accessories.php">
                             <img src="images/Frame 53.svg" alt="Аксессуары" class="category-image">
                         </a>
                         <p>Аксессуары</p>
                     </div>
                     <div class="category-item right">
-                        <a href="shoes.html">
+                        <a href="shoes.php">
                             <img src="images/Frame 54.svg" alt="Обувь" class="category-image">
                         </a>
                         <p>Обувь</p>
@@ -39,7 +39,7 @@
         <div class="collections-block">
             <h1>Коллекции</h1>
             <div class="collection-item">
-                <a href="collections.html">
+                <a href="collections.php">
                 <img src="images/Frame 55.svg" alt="Коллекция" class="collection-image">
                 </a>
             </div>
@@ -47,7 +47,7 @@
         <div class="collections-block">
             <h1>Бренды</h1>
             <div class="collection-item">
-                <a href="brends.html">
+                <a href="brends.php">
                 <img src="images/Frame 56.svg" alt="Бренды" class="collection-image">
                 </a>
             </div>

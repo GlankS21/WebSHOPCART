@@ -49,8 +49,8 @@
                 $stmt = $conn->query($sql); 
                 if ($stmt->rowCount() > 0) {
                     while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                        echo '<div class="product-item" onclick="window.location.href=\'productcard.php?id=' . $row["accessories_id"] . '\'">';
-                        echo '<img src="images/' . htmlspecialchars($row["image"]) . '" alt="' . htmlspecialchars($row["name"]) . '" />';
+                        echo '<div class="product-item" onclick="window.location.href=\'productcard.php?id=' . $row["accessories_id"] . '&category=accessories\'">';
+                        echo '<img src="images/' . htmlspecialchars($row["image"]) . '" alt="' . htmlspecialchars($row["name"]) . '" style="cursor: pointer;" />';
                         echo '<p>' . htmlspecialchars($row["name"]) . '</p>';
                         echo '<p class="price">от ' . number_format($row["price"], 0, ',', ' ') . ' ₽</p>';
                         echo '</div>';
