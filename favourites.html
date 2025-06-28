@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHOPCART - Избранное</title>
-    <link rel="stylesheet" href="style/favourites.css"> 
+    <link rel="stylesheet" href="styles/favourites.css"> 
 </head>
 <body class="main-page">
     <header>
         <div class="top-level">
-            <div class="logo">
-                 <a href="main.html"><h1>SHOPCART</h1></a>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <div class="sub-mobile-menu">
+                <ul class="menu-mb">
+                    <li><a href="clothes.html">Одежда</a></li>
+                    <li><a href="shoes.html">Обувь</a></li>
+                    <li><a href="accessories.html">Аксессуары</a></li>
+                    <li><a href="collections.html">Коллекции</a></li>
+                    <li><a href="brends.html">Бренды</a></li>
+                    <li><a href="about.html">О магазине</a></li>
+                </ul>
+            </div>
+            <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">SHOPCART</h1>
             <div class="icons">
-                <a href="#favorites">
+                <a href="favourites.html">
                     <img src="images/11-119407_font-awesome-heart-icon 1.svg" alt="Избранное" class="icon">
                 </a>
-                <a href="#cart">
+                <a href="cart.html">
                     <img src="images/i-Photoroom.svg" alt="Корзина" class="icon">
                 </a>
             </div>
@@ -62,6 +75,7 @@
         </section>
     </main>
 
+ <!-- Футер -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo"><h1>SHOPCART</h1></div>
@@ -89,6 +103,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/script.js" defer></script>
 
 </body>
 </html>

@@ -18,6 +18,9 @@ body {
     flex-direction: column;
     gap: 60px;
 }
+.current-page{
+    color: var(--accent-color) !important;
+}
 /* ---------------------- Main --------------------- */
 .mobile-menu{
     display: none;
