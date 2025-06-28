@@ -277,6 +277,7 @@ nav ul li a:hover {
   border-radius: 4px;
   font-size: var(--text-normal);
   outline: none;
+  height: 54px;
 }
 .promo-input-group button {
   flex: 1;
@@ -288,6 +289,7 @@ nav ul li a:hover {
   cursor: pointer;
   font-size: var(--text-normal);
   transition: background-color 0.2s ease;
+  height: 54px;
 }
 .promo-input-group button:hover {
   background-color: #444;
@@ -443,6 +445,10 @@ nav ul li a:hover {
     padding: 15px;
     text-align: center;
   }
+  .promo-input-group input, .promo-input-group button{
+    height: 48px;
+  }
+
   /* --------- */
   .footer{
       padding: 30px 15px;
